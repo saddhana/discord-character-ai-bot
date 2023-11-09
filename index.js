@@ -64,7 +64,7 @@ async function processMessage(message, name, bot_id) {
 
 async function generateResponse(message, channelId, name) {
   const prompt = require(`./prompts/${name}.js`);
-  const store = kfs(`./${name}-db`);
+  const store = kfs(`./db/${name}-db`);
 
   let messages = [];
   let chatHistory = [];
